@@ -18,16 +18,75 @@ ul {
 
 a {
     text-align: center;
-    color: gray;
+    color: white;
     text-decoration: none;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.2vw;
 }
 
-span {
-    color: gray;
+.navbar {
+    position: relative;
+    
+}
+.navbar-brand{
+    color: #fff;
+    position: relative;
+   
 }
 
+/* Hamburger */
+.ham {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    transition: transform 400ms;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .hamRotate.active {
+    transform: rotate(45deg);
+  }
+  .hamRotate180.active {
+    transform: rotate(180deg);
+  }
+  .line {
+    fill:none;
+    transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+    stroke:rgb(255, 253, 253);
+    stroke-width:5.5;
+    stroke-linecap:round;
+  }
+  
+  .ham .top {
+    stroke-dasharray: 40 130;
+  }
+  .ham .middle {
+    stroke-dasharray: 40 140;
+  }
+  .ham .bottom {
+    stroke-dasharray: 40 205;
+  }
+  .ham.active .top {
+    stroke-dasharray: 75 130;
+    stroke-dashoffset: -63px;
+  }
+  .ham.active .middle {
+    stroke-dashoffset: -102px;
+  }
+  .ham.active .bottom {
+    stroke-dasharray: 110 205;
+    stroke-dashoffset: -86px;
+  }
+  
+  
+/* Home image */
+
+.home {
+    position: absolute;
+    top: 0%;
+    left: 55%;
+}
 
 /* TYPOGRAPHY */
 
@@ -36,6 +95,7 @@ p {
 }
 
 h5 {
+    position: relative;
     font-family: 'VT323', monospace;
 }
 
@@ -171,10 +231,4 @@ h5 {
 }
 
 
-/* Home image */
 
-.home {
-    position: absolute;
-    top: 0%;
-    left: 55%;
-}
